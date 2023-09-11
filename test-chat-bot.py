@@ -6,6 +6,9 @@ from langchain.schema import (
 )
 import streamlit as st
 from streamlit_chat import message
+import os 
+
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
 st.set_page_config(
     page_title='T.U.E.S.D.A.I Virtual Assistant',
@@ -14,7 +17,7 @@ st.set_page_config(
 
 st.subheader('TUESDAI Custom Chatbot 💡')
 
-chat = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.5)
+chat = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.5, api_key=OPENAI_API_KEY)
 
 if 'messages' not in st.session_state:
     st.session_state.messages = []
