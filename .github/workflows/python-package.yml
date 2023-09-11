@@ -27,6 +27,6 @@ jobs:
     - name: Run Streamlit
       working-directory: ./
       run: |
-        ls -al
+        streamlit run test-chat-bot.py
       env:
         OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
