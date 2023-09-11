@@ -6,8 +6,6 @@ from langchain.schema import (
 )
 import streamlit as st
 from streamlit_chat import message
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv(), override=True)
 
 st.set_page_config(
     page_title='T.U.E.S.D.A.I Virtual Assistant',
