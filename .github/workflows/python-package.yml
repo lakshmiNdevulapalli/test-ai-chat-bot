@@ -21,11 +21,14 @@ jobs:
         python-version: '3.10'
     - name: Install dependencies
       run: |
+        python -m venv venv
+        source venv/bin/activate
         python -m pip install --upgrade pip
-        python -m pip install streamlit
-        python -m pip install langchain
-        python -m pip install dotenv
-    - name: Lint with flake8
+        pip install distribute==0.7.3
+        pip install streamlit
+        pip install langchain
+        pip install dotenv
+    - name: Run Streamlit
       run: |
         streamlit run tuesdai.py
       env:
