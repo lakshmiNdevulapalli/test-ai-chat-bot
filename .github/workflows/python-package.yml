@@ -27,6 +27,6 @@ jobs:
     - name: Run Streamlit
       working-directory: ./
       run: |
-        streamlit run tuesdai.py
+        ls -al
       env:
         OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
