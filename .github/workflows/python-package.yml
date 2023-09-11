@@ -34,3 +34,5 @@ jobs:
     - name: Lint with flake8
       run: |
         streamlit run tuesdai.py
+      env:
+        OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
