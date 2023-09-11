@@ -1,5 +1,4 @@
 langchain
 streamlit
-dotenv
 openai
 streamlit_chat
